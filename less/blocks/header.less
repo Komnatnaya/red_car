@@ -1,0 +1,100 @@
+.page-header {
+	height: 82px;
+	background-color: @color-back;
+	border-bottom: 5px solid @color-border;
+}
+
+.page-header__container {
+	.container();
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page-header__phone {
+	display: none;
+}
+
+.page-header__logo {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 5;
+	margin-left: -75px;
+}
+
+.page-header__open-menu {
+	width: 80px;
+	height: 80px;
+	padding-top: 26px;
+	text-align: center;
+}
+
+.page-header__open-menu span {
+	position: relative;
+	display: inline-block;
+	width: 27px;
+	height: 3px;
+	font-size: 0;
+	background: @color-light;
+	box-shadow: 4px 10px @color-light,
+							4px -10px @color-light;
+}
+
+.page-header__navigation {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	// display: none;
+	width: 300px;
+	background-color: @color-back;
+}
+
+.page-header__close-menu {
+	width: 80px;
+	height: 80px;
+	padding-top: 25px;
+	text-align: center;
+}
+
+.page-header__close-menu span {
+	position: relative;
+	display: inline-block;
+	width: 27px;
+	height: 3px;
+	font-size: 0;
+	background: @color-light;
+	border-radius: 3px;
+}
+
+.page-header__close-menu span::before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: -2px;
+	display: block;
+	width: 14px;
+	height: 3px;
+	background: @color-light;
+	border-radius: 3px;
+	transform: rotate(-45deg);
+}
+
+.page-header__close-menu span::after {
+	content: "";
+	position: absolute;
+	top: -4px;
+	right: -2px;
+	display: block;
+	width: 14px;
+	height: 3px;
+	background: @color-light;
+	border-radius: 3px;
+	transform: rotate(45deg);
+}
+
+.page-header__title-menu h2 {
+	color: @color-light;
+	font-variant: small-caps;
+}
