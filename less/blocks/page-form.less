@@ -1,0 +1,162 @@
+.page-form {
+	padding-left: 30px;
+	padding-right: 145px;
+	padding-bottom: 220px;
+	margin-right: 30px;
+	text-align: right;
+	background-image: url("../img/road@1x.jpg");
+	background-position: right;
+	background-repeat: repeat-y;
+}
+
+.page-form__title {
+	font-size: 35px;
+	line-height: 45px;
+	color: @color-title;
+
+	&::first-line {
+		font-size: 30px;
+		font-weight: 300;
+		color: @color-back;
+	}
+}
+
+.page-form__item {
+	font-size: 30px;
+	font-weight: 700;
+
+	& p {
+		margin-top: 50px;
+		margin-bottom: 15px;
+	}
+
+	& input[type=checkbox] {
+		display: none;
+	}
+}
+
+.page-form__label {
+	position: relative;
+	display: inline-block;
+	width: 146px;
+	height: 42px;
+	background-color: @color-light;
+	border-radius: 10px;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 70px;
+		height: 3px;
+		opacity: 1;
+		background-color: @color-input;
+	}
+
+	&::before {
+		top: 22px;
+		width: 10px;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		left: 75px;
+		width: 16px;
+		transform: rotate(-45deg);
+	}
+}
+
+.page-form__checked {
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 52px;
+		width: 18px;
+		height: 3px;
+		opacity: 0;
+		background-color: @color-input;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
+
+
+.page-form__switch {
+	position: absolute;
+	top: -9px;
+	left: -8px;
+	z-index: 3;
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: @color-light;
+	background-color: @color-switch-n;
+	border-radius: 20px;
+	transform: translateX(0);
+	transition-duration: 0.5s;
+
+	& .page-form__yes {
+		display: none;
+	}
+}
+
+
+input[type=checkbox]:checked + .page-form__label {
+	&::before,
+	&::after {
+		opacity: 0;
+	}
+
+	.page-form__checked {
+		&::after,
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	& .page-form__switch {
+		background-color: @color-switch-y;
+		transform: translateX(104px);
+		transition-duration: 0.5s;
+	}
+
+	& .page-form__yes {
+		display: inline;
+	}
+
+	& .page-form__no {
+		display: none;
+	}
+}
+
+input[type=checkbox]:disabled + .page-form__label {
+	&::before,
+	&::after {
+		display: none;
+	}
+
+	& .page-form__switch {
+		background-color: @color-switch;
+		transform: translateX(52px);
+		transition-duration: 0.5s;
+	}
+
+	& .page-form__yes {
+		display: none;
+	}
+
+	& .page-form__no {
+		display: none;
+	}
+}
