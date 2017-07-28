@@ -1,4 +1,6 @@
 .page-form {
+	position: relative;
+	z-index: 2;
 	padding-left: 30px;
 	padding-right: 145px;
 	padding-bottom: 220px;
@@ -7,6 +9,18 @@
 	background-image: url("../img/road@1x.jpg");
 	background-position: right;
 	background-repeat: repeat-y;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 30px;
+		right: 48px;
+		z-index: 2;
+		display: block;
+		width: 170px;
+		height: 172px;
+		background: url("../img/tree-1@1x.png") no-repeat;
+	}
 }
 
 .page-form__title {
@@ -159,4 +173,14 @@ input[type=checkbox]:disabled + .page-form__label {
 	& .page-form__no {
 		display: none;
 	}
+}
+
+.page-form__car {
+	position: fixed;
+	top: 300px;
+	right: 42px;
+	z-index: 1;
+	width: 61px;
+	height: 132px;
+	background: url("../img/car@1x.png") no-repeat;
 }
