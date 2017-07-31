@@ -911,7 +911,7 @@ input[type=checkbox]:disabled + .page-form__label .page-form__no {
   right: 6.5%;
   z-index: 1;
   width: 9.5%;
-  height: 25%;
+  height: 50%;
   background: url("../img/car@1x.png") no-repeat;
   background-size: contain;
 }
