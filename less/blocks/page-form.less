@@ -1,47 +1,61 @@
 .page-form {
 	position: relative;
 	z-index: 2;
-	padding-left: 30px;
-	padding-right: 145px;
-	padding-bottom: 220px;
-	margin-right: 30px;
+	padding-left: 4.7%;
+	padding-right: 22.5%;
+	padding-bottom: 22%;
+	margin-right: 4.7%;
 	text-align: right;
 	background-image: url("../img/road@1x.jpg");
 	background-position: right;
 	background-repeat: repeat-y;
+	background-size: 14%;
 
 	&::before {
 		content: "";
 		position: absolute;
-		bottom: 30px;
-		right: 48px;
+		bottom: 3%;
+		right: 8%;
 		z-index: 2;
 		display: block;
-		width: 170px;
-		height: 172px;
+		width: 28.5%;
+		height: 17%;
 		background: url("../img/tree-1@1x.png") no-repeat;
+		background-size: contain;
+	}
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+	.page-form {
+		background-image: url("../img/road@2x.jpg");
+
+		&::before {
+			background-image: url(../img/tree-1@2x.png);
+		}
 	}
 }
 
 .page-form__title {
-	font-size: 35px;
-	line-height: 45px;
+	font-size: 5.5vw;
+	line-height: 7vw;
 	color: @color-title;
 
 	&::first-line {
-		font-size: 30px;
+		font-size: 4.7vw;
 		font-weight: 300;
 		color: @color-back;
 	}
 }
 
 .page-form__item {
-	font-size: 30px;
+	margin-bottom: 20%;
+	font-size: 4.5vw;
 	font-weight: 700;
 
 	& p {
-		margin-top: 50px;
-		margin-bottom: 15px;
+		margin-top: 0;
+		margin-bottom: 2.3%;
 	}
 
 	& input[type=checkbox] {
@@ -52,71 +66,52 @@
 .page-form__label {
 	position: relative;
 	display: inline-block;
-	width: 146px;
-	height: 42px;
+	width: 34%;
+	height: 6.5vw;
 	background-color: @color-light;
-	border-radius: 10px;
+	border-radius: 1.5vw;
 
-	&::before,
-	&::after {
+	&::before {
 		content: "";
 		position: absolute;
-		top: 20px;
-		left: 70px;
-		height: 3px;
+		top: 35%;
+		left: 48%;
+		width: 13%;
+		height: 33%;
 		opacity: 1;
-		background-color: @color-input;
-	}
-
-	&::before {
-		top: 22px;
-		width: 10px;
-		transform: rotate(45deg);
+		background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA9lBMVEVLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkoAAAAGwk2VAAAAUHRSTlMACqz92z8Gut8DqvmZm4S5cchf0xJO3hxA9+kkMvEvYH40Jev2PaT8W+H7TGEU1V3aaQvJbze7gu54q5QtAacC54iHt+TExhDc3RrU6BW02T2DiF4AAAABYktHRFGUaXwqAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4QcfFQ8oA1Ys8AAAAO1JREFUKM990Wl3wUAUBuAhqLVFEIQu1FpLqw1aQWmrtfb+/1/DvCexX/Mhmfc+mZOZuULww+FUXO4L7rkiIi/vPv/GKcB/EJROIdav4TcezsPwiIPzKFyNcR5XpCc0zpMp6Wmd80xWevbWuo67+4dDz+WlPxasWCQqlfddq0ivPtk5sElKbef1Bg7Q3BaekV/s2HpFftutMLAjCls7aiN19v9pdFF7R4M+MO8d7trM26v6IcwGw6Nzm5+oj8QY76/TBunfkB88J+capCfIHurv2dvV/iyfzpj71+bwBdsgsVRlg0zBj+Wq+m+cltdbejuW2Z0v0wAAAABJRU5ErkJggg==");
+		background-repeat: no-repeat;
+		background-size: contain;
 	}
 
 	&::after {
-		left: 75px;
-		width: 16px;
-		transform: rotate(-45deg);
-	}
-}
-
-.page-form__checked {
-	&::after,
-	&::before {
 		content: "";
 		position: absolute;
-		top: 20px;
-		left: 52px;
-		width: 18px;
-		height: 3px;
+		top: 35%;
+		left: 40%;
+		width: 10%;
+		height: 33%;
 		opacity: 0;
-		background-color: @color-input;
-	}
-
-	&::before {
-		transform: rotate(45deg);
-	}
-
-	&::after {
-		transform: rotate(-45deg);
+		background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaBAMAAABbZFH9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEVLSkr///9LSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkoAAAAtxfUUAAAAC3RSTlMAAEHg96AGn7L4Qovq5EYAAAABYktHRAyBs1FjAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4QcfFRARkQmqZgAAAI5JREFUGNNjUHZNYAABQUGxEiMG691tUF7G7s0Ms3fvAEsKinXv3slQvRsiCZTavZ0BSIAlgVJAYbZuiCRINJEBKgkWFGSASoKlBKFq0sBSIB5IsgMsBeKBJHeDpcA8kCRYCswDS4KksPBQVaKYgmoDiu2oLkNxNaqPUH2LHBJbGbyRQmkLWggudkeErhUAZdZ4hqGqYqIAAAAASUVORK5CYII=");
+		background-repeat: no-repeat;
+		background-size: contain;
 	}
 }
-
 
 .page-form__switch {
 	position: absolute;
-	top: -9px;
-	left: -8px;
+	top: -20%;
+	left: -8%;
 	z-index: 3;
 	display: block;
-	width: 60px;
-	height: 60px;
+	width: 40%;
+	height: 140%;
 	text-align: center;
-	line-height: 60px;
+	font-size: 4vw;
+	line-height: 9.5vw;
 	color: @color-light;
 	background-color: @color-switch-n;
-	border-radius: 20px;
+	border-radius: 3vw;
 	transform: translateX(0);
 	transition-duration: 0.5s;
 
@@ -125,23 +120,18 @@
 	}
 }
 
-
 input[type=checkbox]:checked + .page-form__label {
-	&::before,
-	&::after {
+	&::before {
 		opacity: 0;
 	}
 
-	.page-form__checked {
-		&::after,
-		&::before {
-			opacity: 1;
-		}
+	&::after {
+		opacity: 1;
 	}
 
 	& .page-form__switch {
 		background-color: @color-switch-y;
-		transform: translateX(104px);
+		transform: translateX(185%);
 		transition-duration: 0.5s;
 	}
 
@@ -162,7 +152,7 @@ input[type=checkbox]:disabled + .page-form__label {
 
 	& .page-form__switch {
 		background-color: @color-switch;
-		transform: translateX(52px);
+		transform: translateX(95%);
 		transition-duration: 0.5s;
 	}
 
@@ -177,10 +167,11 @@ input[type=checkbox]:disabled + .page-form__label {
 
 .page-form__car {
 	position: fixed;
-	top: 300px;
-	right: 42px;
+	top: 40%;
+	right: 6.5%;
 	z-index: 1;
-	width: 61px;
-	height: 132px;
+	width: 9.5%;
+	height: 25%;
 	background: url("../img/car@1x.png") no-repeat;
+	background-size: contain;
 }
