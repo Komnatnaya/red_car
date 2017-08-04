@@ -185,3 +185,155 @@ input[type=checkbox]:disabled + .page-form__label {
 		background-image: url("../img/car@2x.png");
 	}
 }
+
+@media @desktop-widths {
+	.page-form {
+		width: 58%;
+		padding-left: 4.7%;
+		padding-right: 22.5%;
+		padding-bottom: 22%;
+		padding-top: 2%;
+		margin-right: 4.7%;
+		background-size: 14%;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 3%;
+			right: 8%;
+			z-index: 2;
+			display: block;
+			width: 28.5%;
+			height: 17%;
+			background: url("../img/tree-1@1x.png") no-repeat;
+			background-size: contain;
+		}
+	}
+
+	// @media (min-resolution: 144dpi),
+	// (min-resolution: 1.5dppx) {
+	// 	.page-form {
+	// 		background-image: url("../img/road@2x.jpg");
+	//
+	// 		&::before {
+	// 			background-image: url(../img/tree-1@2x.png);
+	// 		}
+	// 	}
+	// }
+
+	.page-form__title {
+		margin-bottom: 10%;
+		font-size: 3vw;
+		line-height: 4.5vw;
+
+		&::first-line {
+			font-size: 1.9vw;
+		}
+	}
+
+	.page-form__item {
+		margin-bottom: 20%;
+		font-size: 2.6vw;
+
+		& p {
+			margin-bottom: 2.3%;
+		}
+	}
+
+	.page-form__label {
+		width: 34%;
+		height: 6.5vw;
+		background-color: @color-light;
+		border-radius: 1.5vw;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 35%;
+			left: 48%;
+			width: 13%;
+			height: 33%;
+			opacity: 1;
+			background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA9lBMVEVLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkoAAAAGwk2VAAAAUHRSTlMACqz92z8Gut8DqvmZm4S5cchf0xJO3hxA9+kkMvEvYH40Jev2PaT8W+H7TGEU1V3aaQvJbze7gu54q5QtAacC54iHt+TExhDc3RrU6BW02T2DiF4AAAABYktHRFGUaXwqAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4QcfFQ8oA1Ys8AAAAO1JREFUKM990Wl3wUAUBuAhqLVFEIQu1FpLqw1aQWmrtfb+/1/DvCexX/Mhmfc+mZOZuULww+FUXO4L7rkiIi/vPv/GKcB/EJROIdav4TcezsPwiIPzKFyNcR5XpCc0zpMp6Wmd80xWevbWuo67+4dDz+WlPxasWCQqlfddq0ivPtk5sElKbef1Bg7Q3BaekV/s2HpFftutMLAjCls7aiN19v9pdFF7R4M+MO8d7trM26v6IcwGw6Nzm5+oj8QY76/TBunfkB88J+capCfIHurv2dvV/iyfzpj71+bwBdsgsVRlg0zBj+Wq+m+cltdbejuW2Z0v0wAAAABJRU5ErkJggg==");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 35%;
+			left: 40%;
+			width: 10%;
+			height: 33%;
+			opacity: 0;
+			background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaBAMAAABbZFH9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEVLSkr///9LSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkpLSkoAAAAtxfUUAAAAC3RSTlMAAEHg96AGn7L4Qovq5EYAAAABYktHRAyBs1FjAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4QcfFRARkQmqZgAAAI5JREFUGNNjUHZNYAABQUGxEiMG691tUF7G7s0Ms3fvAEsKinXv3slQvRsiCZTavZ0BSIAlgVJAYbZuiCRINJEBKgkWFGSASoKlBKFq0sBSIB5IsgMsBeKBJHeDpcA8kCRYCswDS4KksPBQVaKYgmoDiu2oLkNxNaqPUH2LHBJbGbyRQmkLWggudkeErhUAZdZ4hqGqYqIAAAAASUVORK5CYII=");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	.page-form__switch {
+		position: absolute;
+		top: -20%;
+		left: -8%;
+		z-index: 3;
+		display: block;
+		width: 40%;
+		height: 140%;
+		text-align: center;
+		font-size: 1.7vw;
+		line-height: 3.5vw;
+		color: @color-light;
+		background-color: @color-switch-n;
+		border-radius: 3vw;
+		transform: translateX(0);
+		transition-duration: 0.5s;
+	}
+
+	input[type=checkbox]:checked + .page-form__label {
+		&::before {
+			opacity: 0;
+		}
+
+		&::after {
+			opacity: 1;
+		}
+
+		& .page-form__switch {
+			background-color: @color-switch-y;
+			transform: translateX(185%);
+			transition-duration: 0.5s;
+		}
+
+		& .page-form__yes {
+			display: inline;
+		}
+
+		& .page-form__no {
+			display: none;
+		}
+	}
+
+	input[type=checkbox]:disabled + .page-form__label {
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		& .page-form__switch {
+			background-color: @color-switch;
+			transform: translateX(95%);
+			transition-duration: 0.5s;
+		}
+
+		& .page-form__yes {
+			display: none;
+		}
+
+		& .page-form__no {
+			display: none;
+		}
+	}
+
+}
