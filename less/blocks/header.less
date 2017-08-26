@@ -51,18 +51,20 @@
 }
 
 .header__navigation {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: -300px;
 	z-index: 10;
 	width: 300px;
 	height: 100vh;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	background-color: @color-back;
 	border-left: 5px solid @color-border;
+	overflow-y: auto;
 	transition: transform 0.5s;
 
 	&--open {
+		display: block;
 		transform: translateX(-300px);
 	}
 }
@@ -196,7 +198,7 @@
 	.header__container {
 		justify-content: space-between;
 		padding-left: 13%;
-		padding-right: 26%;
+		padding-right: 26.4%;
 	}
 
 	.header__phone {
@@ -249,16 +251,17 @@
 
 	.header__menu {
 		display: flex;
-		padding-top: 5%;
+		padding-top: 6%;
 		padding-bottom: 4%;
 	}
 
 	.header__link-menu {
 		position: relative;
 		padding: 0;
-		padding-right: 30%;
+		padding-right: 0.8vw;
 		color: @color-light;
 		font-size: 1.3vw;
+		font-weight: 400;
 
 		&::before {
 			content: "";
@@ -274,7 +277,7 @@
 		}
 
 		&:hover {
-			padding-right: 30%;
+			padding-right: 0.7vw;
 			font-weight: 400;
 			background: @color-back;
 			border-right: none;
